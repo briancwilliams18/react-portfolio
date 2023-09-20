@@ -14,7 +14,7 @@ function About() {
             <h2>About Me</h2>
             <p>
               Hi, I'm Brian Williams, a passionate web developer with a love for
-              creating web applications. I have experience in ...
+              creating web applications. I have experience 
             </p>
           </div>
         </div>
