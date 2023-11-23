@@ -1,20 +1,20 @@
 import React from 'react';
 
-function About() {
+function AboutMe() {
   return (
-    <section id="about">
+    <section id="aboutme">
       <div className="container">
-        <div className="about-content">
+        <div className="aboutme-content">
           <img
-            src="/path-to-your-avatar.jpg"
-            alt="Your Avatar"
+            src="/path-to-your-avatar.jpg" // Update with the correct path
+            alt="Avatar"
             className="avatar"
           />
           <div className="bio">
             <h2>About Me</h2>
             <p>
               Hi, I'm Brian Williams, a passionate web developer with a love for
-              creating web applications. I have experience 
+              creating web applications. 
             </p>
           </div>
         </div>
@@ -23,4 +23,4 @@ function About() {
   );
 }
 
-export default About;
+export default AboutMe;

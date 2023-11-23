@@ -1,11 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Import Routes instead of Switch
-import Header from './Header';
-import About from './About';
-import Portfolio from './Portfolio';
-import Contact from './Contact';
-import Resume from './Resume';
-import Footer from './Footer';
+import Header from './components/Header';
+import About from './sections/About';
+import Portfolio from './sections/Portfolio';
+import Contact from './sections/Contact';
+import Resume from './sections/Resume';
+import Footer from './components/Footer';
 
 function App() {
   return (
