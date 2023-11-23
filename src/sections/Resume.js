@@ -6,7 +6,7 @@ function Resume() {
       <div className="container">
         <h2>Resume</h2>
         <p>
-          Download my resume: <a href="/path-to-your-resume.pdf">Resume.pdf</a>
+          Download my resume: <a href="resources\Resume.pdf"download="Resume.pdf">Resume.pdf</a>
         </p>
         <div className="proficiencies">
           <h3>Proficiencies</h3>

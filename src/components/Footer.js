@@ -5,12 +5,12 @@ function Footer() {
     <footer>
       <ul className="social-links">
         <li>
-          <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/briancwilliams18" target="_blank" rel="noopener noreferrer">
             GitHub
           </a>
         </li>
         <li>
-          <a href="https://www.linkedin.com/in/yourname/" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/in/brian-williams-7890a0156/" target="_blank" rel="noopener noreferrer">
             LinkedIn
           </a>
         </li>

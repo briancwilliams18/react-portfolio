@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Import Routes instead of Switch
 import Header from './components/Header';
-import About from './sections/About';
+import About from './sections/AboutMe';
 import Portfolio from './sections/Portfolio';
 import Contact from './sections/Contact';
 import Resume from './sections/Resume';

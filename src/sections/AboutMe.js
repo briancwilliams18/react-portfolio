@@ -6,8 +6,8 @@ function AboutMe() {
       <div className="container">
         <div className="aboutme-content">
           <img
-            src="/path-to-your-avatar.jpg" // Update with the correct path
-            alt="Avatar"
+            src="src\images\profile pic .jpg" 
+            alt="avatar"
             className="avatar"
           />
           <div className="bio">
