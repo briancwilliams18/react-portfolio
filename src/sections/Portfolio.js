@@ -4,20 +4,24 @@ import Project from '../components/Project';
 function Portfolio() {
   const projects = [
     {
-      title: 'Project 1',
-      description: 'Description of Project 1',
-      deployedLink: 'https://example.com/project1',
-      githubLink: 'https://github.com/yourusername/project1',
+      title: 'Social Network API',
+      description: 'API for a social network web application where users can share their thoughts, react to friends thoughts, and create a friend list. Express.js for routing, a MongoDB database, and the Mongoose ODM',
+      githubLink: 'https://github.com/briancwilliams18/mod18homework',
     },
     {
-      title: 'Project 2',
-      description: 'Description of Project 2',
-      deployedLink: 'https://example.com/project2',
-      githubLink: 'https://github.com/yourusername/project2',
+      title: 'Employee Tracker',
+      description: 'A command-line application from scratch to manage an employee database, using Node.js, Inquirer, and MySQL.',
+      githubLink: 'https://github.com/briancwilliams18/mod12homework',
     },
-    // Add more project objects as needed
+    {
+      title: 'Regex Tutorial',
+      description: 'Tutorial that explains how a specific regular expression, or regex, functions by breaking down each part of the expression and describing what it does',
+      deployedLink: 'https://example.com/project2',
+      githubLink://gist.github.com/briancwilliams18/5e8b79eda61c152e5504a447494af47e
+    },
+    // Add more projectS
   ];
-
+ 
   return (
     <div className="portfolio">
       <h1>Portfolio</h1>
