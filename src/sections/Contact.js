@@ -7,9 +7,10 @@ function Contact() {
     message: '',
   });
 
-  const [formErrors, setFormErrors] = useState({
+  const [errors, setErrors] = useState({
     name: '',
     email: '',
+    message: '',
   });
 
   const handleChange = (e) => {
@@ -18,43 +19,48 @@ function Contact() {
       ...formData,
       [name]: value,
     });
+  };
 
-    // Validate fields on change
-    if (value.trim() === '' && name !== 'message') {
-      setFormErrors({
-        ...formErrors,
-        [name]: 'This field is required.',
-      });
-    } else if (name === 'email' && !isValidEmail(value)) {
-      setFormErrors({
-        ...formErrors,
-        email: 'Please enter a valid email address.',
-      });
+  const validateForm = () => {
+    let isValid = true;
+    const newErrors = { ...errors };
+
+    // Validate name
+    if (formData.name.trim() === '') {
+      newErrors.name = 'Name is required';
+      isValid = false;
     } else {
-      setFormErrors({
-        ...formErrors,
-        [name]: '',
-      });
+      newErrors.name = '';
     }
+
+    // Validate email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      newErrors.email = 'Invalid email address';
+      isValid = false;
+    } else {
+      newErrors.email = '';
+    }
+
+    // Validate message
+    if (formData.message.trim() === '') {
+      newErrors.message = 'Message is required';
+      isValid = false;
+    } else {
+      newErrors.message = '';
+    }
+
+    setErrors(newErrors);
+    return isValid;
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // form submission logic 
-    // Check if there are no errors before submitting
-    if (Object.values(formErrors).every((error) => error === '')) {
-      // Form is valid, proceed with submission
-      console.log('Form submitted:', formData);
-    } else {
-      // Form has errors, display an error message
-      console.log('Form has errors. Please correct them before submitting.');
-    }
-  };
 
-  const isValidEmail = (email) => {
-    // Simple email validation regex
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
+    if (validateForm()) {
+      // Add your form submission logic here
+      console.log('Form submitted:', formData);
+    }
   };
 
   return (
@@ -62,6 +68,7 @@ function Contact() {
       <div className="container">
         <h2>Contact Me</h2>
         <form onSubmit={handleSubmit}>
+          {/* Name input with error message */}
           <div className="form-group">
             <label htmlFor="name">Name:</label>
             <input
@@ -72,8 +79,10 @@ function Contact() {
               onChange={handleChange}
               required
             />
-            <p className="error-message">{formErrors.name}</p>
+            <span className="error">{errors.name}</span>
           </div>
+
+          {/* Email input with error message */}
           <div className="form-group">
             <label htmlFor="email">Email:</label>
             <input
@@ -84,8 +93,10 @@ function Contact() {
               onChange={handleChange}
               required
             />
-            <p className="error-message">{formErrors.email}</p>
+            <span className="error">{errors.email}</span>
           </div>
+
+          {/* Message textarea with error message */}
           <div className="form-group">
             <label htmlFor="message">Message:</label>
             <textarea
@@ -95,7 +106,9 @@ function Contact() {
               onChange={handleChange}
               required
             ></textarea>
+            <span className="error">{errors.message}</span>
           </div>
+
           <button type="submit">Submit</button>
         </form>
       </div>
@@ -104,4 +117,3 @@ function Contact() {
 }
 
 export default Contact;
-

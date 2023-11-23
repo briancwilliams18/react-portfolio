@@ -2,7 +2,7 @@ import React from 'react';
 
 function Project({ title, description, deployedLink, githubLink }) {
   return (
-    <div className="project">
+    <article className="project">
       <h3>{title}</h3>
       <p>{description}</p>
       <p>
@@ -14,7 +14,7 @@ function Project({ title, description, deployedLink, githubLink }) {
           GitHub Repository
         </a>
       </p>
-    </div>
+    </article>
   );
 }
 

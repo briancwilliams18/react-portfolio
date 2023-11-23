@@ -16,8 +16,7 @@ function Portfolio() {
     {
       title: 'Regex Tutorial',
       description: 'Tutorial that explains how a specific regular expression, or regex, functions by breaking down each part of the expression and describing what it does',
-      deployedLink: 'https://example.com/project2',
-      githubLink://gist.github.com/briancwilliams18/5e8b79eda61c152e5504a447494af47e
+      githubLink: '//gist.github.com/briancwilliams18/5e8b79eda61c152e5504a447494af47e'
     },
     // Add more projectS
   ];
